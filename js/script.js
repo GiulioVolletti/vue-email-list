@@ -12,12 +12,17 @@ var mailList = new Vue (
       for (var i = 0; i < 10; i++) {
         axios
         .get('https://flynn.boolean.careers/exercises/api/random/mail')
-        .then(function (item) {
-          // console.log(item);
-          let mail = item.data.response;
-          mailList.mailListArray.push(mail)
+        .then((result) => {
+          this.mailListArray.push(result.data.response);
+
+          // soluzione 2
+
+          // let mail = result.data.response;
+          // this.mailListArray.push(mail)
+          // console.log(result);
           // console.log(mail);
           // console.log( mailList.mailListArray);
+
         }
       );
     }
