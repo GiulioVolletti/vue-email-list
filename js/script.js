@@ -17,7 +17,7 @@ var mailList = new Vue (
           let mail = item.data.response;
           mailList.mailListArray.push(mail)
           // console.log(mail);
-          console.log( mailList.mailListArray);
+          // console.log( mailList.mailListArray);
         }
       );
     }
